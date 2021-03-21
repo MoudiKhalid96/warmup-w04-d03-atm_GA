@@ -27,15 +27,6 @@ public class Main {
 			processNumber(processNumber, atm);
 		}
 		
-		
-//		atm.deposit(1000);
-//		atm.deposit(500);
-//		atm.showBalance();
-//		
-//		atm.widthdraw(1500);
-//		atm.showBalance();
-//
-//		atm.getTransactionHistory();
 	}
 	
 	public static void processes() {
