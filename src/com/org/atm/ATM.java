@@ -19,8 +19,6 @@ public class ATM {
 
 	//Methods
 	public void deposit(double money) {
-		
-		
 		this.money += money;
 		System.out.println("Amount deposited " + money);
 		
@@ -40,17 +38,13 @@ public class ATM {
 		
 		transactionHistory[counter] = money + " has withdrawed from your account";
 		counter++;
-		
 	}
 
 	public void showBalance() {
-
 		System.out.println("Your balance is " + this.money);
 	}
 
 
-	
-	
 	//Set and Get methods
 	public double getMoney() {
 		return money;
@@ -69,12 +63,14 @@ public class ATM {
 	}
 
 	public String[] getTransactionHistory() {
-		for(int i=0 ; i<counter ; i++) {
-			System.out.println((i+1) + ". " + transactionHistory[i]);
+		if(counter == 0) {
+			System.out.println("You haven't done any transaction yet");
+		}else {
+			for(int i=0 ; i<counter ; i++) {
+				System.out.println((i+1) + ". " + transactionHistory[i]);
+			}
 		}
 		return transactionHistory;
 	}
 
-
-	
 }
